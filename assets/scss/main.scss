@@ -1,0 +1,375 @@
+/* グローバルリセット */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 500;
+  word-break: break-word;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 1;
+  display: inline-block;
+}
+
+span {
+  font-size: 16px;
+  line-height: 1;  
+}
+
+ul,
+li,
+a,
+textarea,
+button {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+p {
+  margin-bottom: 2em;
+}
+.content h2 {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: .5em;  
+}
+
+/* 内部コンテンツの幅制限 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 
+}
+
+.content.columns {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+.content-column-left {
+  flex: 3; 
+}
+
+.content-column-right {
+  flex: 7; 
+}
+
+img {
+  vertical-align: bottom;
+  border-style: none;
+  height: auto;
+  max-width: 100%;  
+}
+
+/* 共通のセクションスタイル */
+.page-content {
+  min-height: 760px;
+  background-color: #f8f8f8;
+  padding: 5em 0px;
+}
+
+section {
+  width: 100%;
+  padding: 4em 0;
+}
+@media  (max-width: 768px) {
+  section {
+    padding: 2em 0;
+  }  
+}
+
+
+/* 共通の見出し */
+.page-content h1, .page-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+small {
+  font-size: 14px;
+  display: block;
+}
+
+/* 共通のリンクボタン */
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+}
+
+.button-link-primary{
+  max-width: 200px;
+}
+
+.button-link .arrow {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.btn-icon-arrow {
+  background-color: currentcolor;
+  clip-path: polygon(45% 9%, 75% 51%, 45% 90%, 30% 90%, 60% 50%, 30% 10%);
+          content: "";
+  display: inline-block;
+  height: 16px;
+  width: 18px;
+  vertical-align: middle;
+}
+.button-link-primary .btn-icon-arrow {
+    position: relative;
+    top: -2px;
+    left: 6px;
+}
+.button-link-secondary {
+  display: flex;
+  width: 200px;
+  padding: 0;
+}
+@media  (max-width: 959px) {
+  .content.columns {
+    flex-direction: column;
+  }
+}
+/*PCでは無効（改行しない）*/
+.br-sp{
+  display: none;
+}
+
+/*スマートフォンでは有効（改行する）*/
+@media screen and (max-width:768px) {
+  .br-sp{
+      display: block;
+  }
+}
+
+
+/* About us セクション */
+.about-us-section {
+  .content.columns {
+    gap: 2em;
+  }
+
+  .content-column-left {
+    flex: 4;
+  }
+
+  .content-column-right {
+    flex: 6;
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+}
+
+/* お知らせセクション */
+.news-section {
+
+  .news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      display: flex;
+      align-items: start;
+
+      .news-date {
+        margin-right: 2em;
+      }
+    }
+
+    @media (max-width: 959px) {
+      a {
+        flex-direction: column;
+        gap: 1em;
+      }
+    }
+
+    .news-item {
+      border-bottom: 1px solid #ddd;
+      padding: 16px;
+
+
+    }
+  }
+}
+
+/* 会社概要セクション */
+.company-info-section {
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    width: 20%;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  td {
+    width: 80%;
+    text-align: left;
+  }
+}
+
+.contact-section p {
+  margin-bottom: 3em;
+}
+
+@media (max-width: 959px) {
+  .company-info-section th {
+    width: 30%;
+  }
+}
+
+
+.news-content h2 {
+  font-size: 28px;
+}
+/* 事業内容セクション */
+.services-section {
+  .service-number {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .service-text {
+    gap: 1em;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      font-size: .9em;
+    }
+  }
+
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    transition: transform 0.3s ease;
+
+    .service-text {
+      display: flex;
+      align-items: center;
+
+      .service-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .service-title {
+          font-size: 1em;
+        }
+
+        .service-text {
+          gap: 0;
+        }
+      }
+
+      p {
+        margin: 0;
+        color: #666;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content-column-right {
+    text-align: center;
+  }
+
+  .service-text {
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+}
