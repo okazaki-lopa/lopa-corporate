@@ -17,8 +17,8 @@ export default defineNuxtConfig({
     [
       'nuxt-microcms-module',
       {
-        serviceDomain: process.env.MICRO_CMS_DOMAIN,
-        apiKey: process.env.MICRO_CMS_API_KEY,
+        serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+        apiKey: process.env.MICROCMS_API_KEY,
         target: 'server'
       },
     ]
